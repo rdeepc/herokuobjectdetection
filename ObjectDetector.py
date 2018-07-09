@@ -45,7 +45,7 @@ class Detector:
                 yRightTop = int(detections[0, 0, i, 6] * rows)
 
                 cv.rectangle(img, (xLeftBottom, yLeftBottom), (xRightTop, yRightTop),
-                             (0, 255, 0))
+                             (0, 0, 255))
                 if class_id in classNames:
                     label = classNames[class_id] + ": " + str(confidence)
                     labelSize, baseLine = cv.getTextSize(label, cv.FONT_HERSHEY_SIMPLEX, 0.5, 1)
